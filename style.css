@@ -1,0 +1,284 @@
+/* Card hover effects */
+.card:hover, .project-card:hover {
+    transform: translateY(-5px); /* Slightly lift the card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Rest of your existing CSS remains the same */
+* {
+    box-sizing: border-box;
+}
+
+#hero {
+    background: url('images/heroh.jpg') center/cover no-repeat; /* Use your image path */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff3b2f;
+}
+
+/* Full-screen Landing Page */
+#landing {
+    background-image: url('images/landing.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    color: white; /* Text color */
+    position: relative; /* Ensure position context for children */
+}
+
+.landing-content {
+    text-align: center; /* Center the text */
+    backdrop-filter: blur(5px); /* Optional: add a blur effect behind the text */
+    padding: 20px; /* Add some padding */
+    z-index: 2; /* Make sure text appears above the background */
+}
+
+.landing-content h1,
+.landing-content p {
+    margin: 10px 0; /* Space out text elements */
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Ensure the body does not have any extra padding or margins */
+body {
+    margin: 0;
+}
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Set a fallback background color for all pages */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 123, 255, 0.8); /* Slightly transparent nav for visibility */
+    padding: 15px;
+    position: sticky; /* Fix nav at the top */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure nav is above other content */
+}
+
+nav button {
+    margin: 0 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+nav button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s;
+}
+
+/* Main section styles */
+main {
+    padding: 20px;
+}
+
+/* Section styles */
+.page {
+    display: none; /* Hide all sections by default */
+}
+
+.page.active {
+    display: block; /* Show active section */
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Home section styles */
+.home-content {
+    text-align: center;
+    margin-top: 100px; /* Space from the top */
+}
+
+.home-content .text-1, .home-content .text-2, .home-content .text-3 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.home-content .cta-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.home-content .cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* About section styles */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+}
+
+.column.left {
+    flex: 0 0 30%; /* Fixed width for the image */
+}
+
+.column.right {
+    flex: 1; /* Take remaining space */
+}
+
+.column img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Skills section styles */
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: hsl(242, 47%, 84%);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 300px; /* Fixed width for skill cards */
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* Projects section styles */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #eedddd;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    width: 300px; /* Fixed width for project cards */
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Contact section styles */
+.contact-content {
+    text-align: center;
+}
+
+.contact-content a {
+    color: #007bff;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack nav buttons */
+    }
+
+    .home-content .text-1, .home-content .text-2, .home-content .text-3 {
+        font-size: 1.5rem; /* Smaller text for mobile */
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack columns */
+    }
+
+    .column {
+        flex: 1 0 100%; /* Full width on mobile */
+    }
+
+    .skills-content, .projects-container {
+        flex-direction: column; /* Stack cards on mobile */
+    }
+
+    .card, .project-card {
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0; /* Reduced margin for mobile */
+    }
+}
